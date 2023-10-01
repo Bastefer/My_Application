@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/cardview_dark_background"
@@ -18,13 +18,7 @@
         android:inputType="textPersonName"
         android:text="0"
         android:textColor="#A1887F"
-
         android:textSize="50pt" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
 
         <TableRow
             android:layout_width="match_parent"
@@ -34,12 +28,22 @@
             <Button
                 android:id="@+id/buAC"
                 android:layout_width="106dp"
+                android:onClick="clearDistance"
                 android:layout_height="match_parent"
-                android:layout_weight="0.40"
+                android:layout_weight="0"
                 android:text="AC" />
+
+            <Button
+                android:id="@+id/budel"
+                android:layout_width="106dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0"
+                android:onClick="deleteCharacter"
+                android:text="⌫" />
 
             <Switch
                 android:id="@+id/swiAC"
+                android:onClick="convertDistance"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -48,7 +52,7 @@
                 tools:ignore="DuplicateIds" />
 
         </TableRow>
-    </TableLayout>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -56,6 +60,7 @@
 
             <Button
                 android:id="@+id/bu7"
+                android:onClick="Number"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -63,6 +68,7 @@
 
             <Button
                 android:id="@+id/bu8"
+                android:onClick="Number"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -70,6 +76,7 @@
 
             <Button
                 android:id="@+id/bu9"
+                android:onClick="Number"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -84,6 +91,7 @@
 
             <Button
                 android:id="@+id/bu4"
+                android:onClick="Number"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.40"
@@ -91,6 +99,7 @@
 
             <Button
                 android:id="@+id/bu5"
+                android:onClick="Number"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.40"
@@ -98,6 +107,7 @@
 
             <Button
                 android:id="@+id/bu6"
+                android:onClick="Number"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.40"
@@ -111,6 +121,7 @@
 
         <Button
             android:id="@+id/bu1"
+            android:onClick="Number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -118,6 +129,7 @@
 
         <Button
             android:id="@+id/bu2"
+            android:onClick="Number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -125,6 +137,7 @@
 
         <Button
             android:id="@+id/bu3"
+            android:onClick="Number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -137,18 +150,27 @@
             android:layout_weight="1">
         <Button
             android:id="@+id/bu0"
+            android:onClick="Number"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="0.5"
+            android:layout_weight="1"
             android:text="0" />
 
             <Button
                 android:id="@+id/buequals"
+                android:onClick="Operation"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="=" />
 
+            <Button
+                android:id="@+id/budot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="Number"
+                android:text="." />
         </TableRow>
 </LinearLayout>
 
